@@ -1,6 +1,6 @@
 importData = LOAD 'bikes.csv' USING PigStorage(',') AS  (date:chararray, total:int, pn:int, ps:int, bn:int, bs:int);
 
-useData = FOREACH importData GENERATE date, total, bn, bs;
+useData = FOREACH importData GENERATE date, total, bn, bs, pn, ps;
 
 
 

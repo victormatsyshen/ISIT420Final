@@ -1,6 +1,6 @@
 importData = LOAD 'SeattleWeatherInput.csv' USING PigStorage(',') AS  (date:chararray, max:int, min:int, ave:double, departure:double, HDD:int, CDD:int, Precip:double,NewSnow:int,SnowDepth:int);
 
-useData = FOREACH importData GENERATE date, max, min, ave, Precip;
+useData = FOREACH importData GENERATE date, max, min, ave, Precip, NewSnow, SnowDepth;
 
 
 
